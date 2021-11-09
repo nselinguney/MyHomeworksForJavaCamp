@@ -13,7 +13,7 @@ import day6.hrms.entities.concretes.Job;
 @RestController
 @RequestMapping("/api/jobs")
 public class JobsController {
-	
+
 	private JobService jobService;
 
 	@Autowired
@@ -21,7 +21,7 @@ public class JobsController {
 		super();
 		this.jobService = jobService;
 	}
-	
+
 	@GetMapping("/getAllJobs")
 	public List<Job> getAll() {
 		return this.jobService.getAll();

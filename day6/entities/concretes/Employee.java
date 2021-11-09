@@ -1,19 +1,25 @@
 package day6.hrms.entities.concretes;
 
-import lombok.Data;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Data
+@Entity
+@Table(name="employees")
 public class Employee extends User {
-
-	private String sirketAdı;
-	private String webSitesi; 
-	private int telefon;
 	
-	public Employee(String ad, String soyad, String ePosta, String sifre, String sifreTekrar, String sirketAdı,
-			String webSitesi, int telefon) {
-		super(ad, soyad, ePosta, sifre, sifreTekrar);
-		this.sirketAdı = sirketAdı;
-		this.webSitesi = webSitesi;
-		this.telefon = telefon;
-	}
+	@Id
+	@GeneratedValue
+	@Column(name="id")
+	private int id;
+	
+	@Column(name="first_name")
+	private String ad;
+	
+	@Column(name="last_name")
+	private String soyad;
+	
+	
 }

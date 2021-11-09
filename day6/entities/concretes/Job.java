@@ -9,27 +9,26 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="job_titles")
+@Table(name = "job_titles")
 @Data
 public class Job {
-	
+
 	@Id
 	@GeneratedValue
-	@Column(name="id")
+	@Column(name = "id")
 	String id;
-	@Column(name="title")
+
+	@Column(name = "title")
 	String title;
-	
+
 	public Job() {
 		super();
 	}
-	
+
 	public Job(String id, String title) {
 		super();
 		this.id = id;
 		this.title = title;
 	}
-
-	
 
 }

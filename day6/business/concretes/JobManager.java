@@ -12,18 +12,17 @@ import day6.hrms.entities.concretes.Job;
 @Service
 public class JobManager implements JobService {
 
-	private JobDao jobsDao;
-	
+	private JobDao jobDao;
+
 	@Autowired
 	public JobManager(JobDao jobsDao) {
 		super();
-		this.jobsDao = jobsDao;
+		this.jobDao = jobsDao;
 	}
 
 	@Override
 	public List<Job> getAll() {
-		// TODO Auto-generated method stub
-		return this.jobsDao.findAll();
+		return this.jobDao.findAll();
 	}
 
 }

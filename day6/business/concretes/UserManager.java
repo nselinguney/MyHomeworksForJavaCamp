@@ -13,7 +13,7 @@ import day6.hrms.entities.concretes.User;
 public class UserManager implements UserService {
 
 	private UserDao userDao;
-	
+
 	@Autowired
 	public UserManager(UserDao userDao) {
 		super();
@@ -25,5 +25,4 @@ public class UserManager implements UserService {
 		// TODO Auto-generated method stub
 		return this.userDao.findAll();
 	}
-
 }
