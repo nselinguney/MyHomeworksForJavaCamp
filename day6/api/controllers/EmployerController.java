@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import day6.hrms.business.abstracts.EmployerService;
+import day6.hrms.core.utilities.results.Result;
+import day6.hrms.entities.concretes.Candidate;
 import day6.hrms.entities.concretes.Employer;
 
 @RestController
@@ -29,4 +31,9 @@ public class EmployerController {
 		
 		return employerService.getAllEmployers();
 	}
+	
+	 @PostMapping("/addEmployer")
+	 public Result add(@RequestBody Employer employer){
+       return this.employerService.add(employer);
+     }
 }

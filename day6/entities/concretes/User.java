@@ -12,16 +12,13 @@ import lombok.Data;
 @Data
 public class User {
 
-	private String ad;
-	private String soyad;
-
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
 	private int id;
 
 	@Column(name = "email")
-	private String ePosta;
+	private String eMail;
 
 	@Column(name = "sifre")
 	private String sifre;
@@ -33,11 +30,9 @@ public class User {
 		super();
 	}
 
-	public User(String ad, String soyad, String ePosta, String sifre, String sifreTekrar) {
+	public User(String eMail, String sifre, String sifreTekrar) {
 		super();
-		this.ad = ad;
-		this.soyad = soyad;
-		this.ePosta = ePosta;
+		this.eMail = eMail;
 		this.sifre = sifre;
 		this.sifreTekrar = sifreTekrar;
 	}
